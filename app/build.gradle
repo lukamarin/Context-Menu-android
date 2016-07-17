@@ -1,0 +1,23 @@
+apply plugin: 'com.android.application'
+//apply from: '../mavenpush.gradle'
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.yalantis.contextmenu.sample"
+        minSdkVersion 11
+        targetSdkVersion 23
+        versionCode Integer.parseInt(project.VERSION_CODE)
+        versionName VERSION_NAME
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    compile 'com.yalantis:contextmenu:1.0.7'
+}
