@@ -1,4 +1,4 @@
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Context--Menu.Android-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1387) [![Yalantis](https://github.com/Yalantis/Context-Menu.Android/blob/master/badge.png)](https://yalantis.com/?utm_source=github)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Context--Menu.Android-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1387) [![Yalantis](https://github.com/lukamarin/Context-Menu-android/blob/master/badge.png)](https://yalantis.com/?utm_source=github)
 
 # ContextMenu 
 
@@ -14,9 +14,9 @@ Check this [project on Behance] (https://www.behance.net/gallery/20411445/Mobile
 
 *For a working implementation, have a look at the ```app``` module*
 
-#### 	1. Clone repository and add sources into your project or use Gradle: 
+####    1. Clone repository and add sources into your project or use Gradle: 
 ``` compile 'com.yalantis:contextmenu:1.0.7' ```
-#### 	2. Create list of `MenuObject`, which consists of icon or icon and description.
+####    2. Create list of `MenuObject`, which consists of icon or icon and description.
 You can use any `resource, bitmap, drawable, color` as image:  
 ```
     item.setResource(...)  
@@ -36,15 +36,15 @@ You can use any `resource, drawable, color` as background:
 ```
 Now You can easily add text appearance style for menu titles: 
 ```
-	In your project styles create style for text appearance
-	(For better visual effect extend it from TextView.DefaultStyle):
-	
-	 <style name="TextViewStyle" parent="TextView.DefaultStyle">
+    In your project styles create style for text appearance
+    (For better visual effect extend it from TextView.DefaultStyle):
+    
+     <style name="TextViewStyle" parent="TextView.DefaultStyle">
         <item name="android:textStyle">italic|bold</item>
         <item name="android:textColor">#26D0EB</item>
-	 </style>
+     </style>
 
-And set it's id to your MenuObject :	
+And set it's id to your MenuObject :    
     
         MenuObject addFr = new MenuObject("Add to friends");
         BitmapDrawable bd = new BitmapDrawable(getResources(),
@@ -70,7 +70,7 @@ Example:
     menuObjects.add(send);
 ```
 
-####	3. Create `newInstance` of `ContextMenuDialogFragment`, which received `MenuParams` object.
+####    3. Create `newInstance` of `ContextMenuDialogFragment`, which received `MenuParams` object.
 
 ```
     MenuParams menuParams = new MenuParams();
@@ -81,7 +81,7 @@ Example:
     mMenuDialogFragment = ContextMenuDialogFragment.newInstance(menuParams);
 ```
 
-####	4. Set menu with button, which will open `ContextMenuDialogFragment`.
+####    4. Set menu with button, which will open `ContextMenuDialogFragment`.
 
 ```
     @Override
@@ -102,9 +102,9 @@ Example:
     }
 ```
 
-####	5. Implement `OnMenuItemClickListener` interface with `onMenuItemClick` method.
-	
-```	
+####    5. Implement `OnMenuItemClickListener` interface with `onMenuItemClick` method.
+    
+``` 
 public class MainActivity extends ActionBarActivity implements OnMenuItemClickListener
 …
     @Override
@@ -156,9 +156,9 @@ To stay `Context Menu` below Status Bar set `fitSystemWindows` to true and `clip
 
 ### Version: 1.0.5
 
-  * Fixed `setClosableOutside` [issue](https://github.com/Yalantis/Context-Menu.Android/issues/25).
-  * Fixed `setAnimationDuration` doesn´t work for open event [issue](https://github.com/Yalantis/Context-Menu.Android/issues/22).
-  * Fixed menu item listener setting mechanism. It can be not activity but any class that implements listeners now. [Issue](https://github.com/Yalantis/Context-Menu.Android/issues/24). Attention! You have to set listeners to the context fragment manually. Check block 5 in the `Usage`.
+  * Fixed `setClosableOutside` [issue](https://github.com/lukamarin/Context-Menu-android/issues/25).
+  * Fixed `setAnimationDuration` doesn´t work for open event [issue](https://github.com/lukamarin/Context-Menu-android/issues/22).
+  * Fixed menu item listener setting mechanism. It can be not activity but any class that implements listeners now. [Issue](https://github.com/lukamarin/Context-Menu-android/issues/24). Attention! You have to set listeners to the context fragment manually. Check block 5 in the `Usage`.
 
 ### Version: 1.0.4
 
@@ -193,7 +193,7 @@ com.yalantis.contextmenu.lib.interfaces.OnMenuItemClickListener.onMenuItemClick(
 
 #### Let us know!
 
-We’d be really happy if you sent us links to your projects where you use our component. Just send an email to github@yalantis.com And do let us know if you have any questions or suggestion regarding the animation. 
+We’d be really happy if you sent us links to your projects where you use our component. Just send an email to github@lukamarin.com And do let us know if you have any questions or suggestion regarding the animation. 
 
 P.S. We’re going to publish more awesomeness wrapped in code and a tutorial on how to make UI for Android (iOS) better than better. Stay tuned!
 
